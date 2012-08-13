@@ -30,7 +30,7 @@ of a cocain-addled psychoanalyst, there is no way to revive the object
 from the signature string that sigmund gives you.  In fact, it's
 barely even readable.
 
-As with `sys.inspect` and `JSON.stringify`, larger objects will
+As with `util.inspect` and `JSON.stringify`, larger objects will
 produce larger signature strings.
 
 Because sigmund is a bit less strict than the more thorough
