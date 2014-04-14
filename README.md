@@ -11,7 +11,7 @@ string key suitable for caches and the like.
 function doSomething (someObj) {
   var key = sigmund(someObj, maxDepth) // max depth defaults to 10
   var cached = cache.get(key)
-  if (cached) return cached)
+  if (cached) return cached
 
   var result = expensiveCalculation(someObj)
   cache.set(key, result)
