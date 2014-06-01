@@ -26,7 +26,7 @@ For example, the object `{0:'foo'}` will be treated identically to the
 array `['foo']`.
 
 Also, just as there is no way to summon the soul from the scribblings
-of a cocain-addled psychoanalyst, there is no way to revive the object
+of a cocaine-addled psychoanalyst, there is no way to revive the object
 from the signature string that sigmund gives you.  In fact, it's
 barely even readable.
 
