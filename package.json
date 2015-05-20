@@ -1,6 +1,6 @@
 {
   "name": "sigmund",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quick and dirty signatures for Objects.",
   "main": "sigmund.js",
   "directories": {
