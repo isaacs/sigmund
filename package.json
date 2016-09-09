@@ -8,7 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "tap": "~0.3.0"
+    "tap": "~7.1.2"
   },
   "scripts": {
     "test": "tap test/*.js",
