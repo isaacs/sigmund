@@ -1,4 +1,5 @@
 module.exports = sigmund
+var keys = Object.keys
 function sigmund (subject, maxSessions) {
     maxSessions = maxSessions || 10;
     var notes = [];
@@ -6,24 +7,22 @@ function sigmund (subject, maxSessions) {
     var RE = RegExp;
 
     function psychoAnalyze (subject, session) {
-        if (session > maxSessions) return;
+        if (notes.indexOf(subject) !== -1 || session >= maxSessions) return;
 
-        if (typeof subject === 'function' ||
-            typeof subject === 'undefined') {
+        var type = typeof subject;
+        if (type === 'function' || type === 'undefined') {
             return;
         }
 
-        if (typeof subject !== 'object' || !subject ||
+        if (type !== 'object' || !subject ||
             (subject instanceof RE)) {
             analysis += subject;
             return;
         }
 
-        if (notes.indexOf(subject) !== -1 || session === maxSessions) return;
-
         notes.push(subject);
         analysis += '{';
-        Object.keys(subject).forEach(function (issue, _, __) {
+        keys(subject).forEach(function (issue) {
             // pseudo-private values.  skip those.
             if (issue.charAt(0) === '_') return;
             var to = typeof subject[issue];
